@@ -9,69 +9,60 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    private Button button0, button1, button2, button3, button4, button5, button6, button7, button8,
-            button9, buttonDot, buttonPlus, buttonMinus, buttonDivide, buttonMultiple,
-            buttonEquals;
-    String operationType;
-    TextView calcWindow;
-
+    private Calculator calculator;
+    private TextView calcWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button0 = findViewById(R.id.button0);
-        button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
-        button3 = findViewById(R.id.button3);
-        button4 = findViewById(R.id.button4);
-        button5 = findViewById(R.id.button5);
-        button6 = findViewById(R.id.button6);
-        button7 = findViewById(R.id.button7);
-        button8 = findViewById(R.id.button8);
-        button9 = findViewById(R.id.button9);
-        buttonDot = findViewById(R.id.buttonDot);
-        buttonPlus = findViewById(R.id.buttonPlus);
-        buttonMinus = findViewById(R.id.buttonMinus);
-        buttonDivide = findViewById(R.id.buttonDivide);
-        buttonMultiple = findViewById(R.id.buttonMultiple);
-        buttonEquals = findViewById(R.id.buttonEquals);
+        int[] numberIds = new int[]{
+                R.id.button0,
+                R.id.button1,
+                R.id.button2,
+                R.id.button3,
+                R.id.button4,
+                R.id.button5,
+                R.id.button6,
+                R.id.button7,
+                R.id.button8,
+                R.id.button9
+        };
 
+        int[] operatorIds = new int[]{
+                R.id.buttonPlus,
+                R.id.buttonMinus,
+                R.id.buttonMultiple,
+                R.id.buttonDivide,
+                R.id.buttonEquals
+        };
         calcWindow = findViewById(R.id.calcWindow);
-    }
+        calculator = new Calculator();
 
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public void onClick(View view) {
-        float firstArgument = 0;
-        float secondArgument = 0;
-        float result = 0;
+        View.OnClickListener numberButtonsClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculator.onNumberPressed(view.getId());
+                calcWindow.setText(calculator.getText());
+            }
+        };
 
-        switch (view.getId()) {
-            case R.id.buttonPlus:
-                operationType = "+";
-                result = firstArgument + secondArgument;
-                break;
-            case R.id.buttonMinus:
-                operationType = "-";
-                result = firstArgument - secondArgument;
-                break;
-            case R.id.buttonMultiple:
-                operationType = "*";
-                result = firstArgument * secondArgument;
-                break;
-            case R.id.buttonDivide:
-                operationType = "/";
-                result = firstArgument / secondArgument;
-                break;
-            default:
-                break;
+        View.OnClickListener operatorButtonsClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculator.onOperatorPressed(view.getId());
+                calcWindow.setText(calculator.getText());
+            }
+        };
+
+        for (int numberId : numberIds) {
+            findViewById(numberId).setOnClickListener(numberButtonsClickListener);
         }
-        calcWindow.setText(firstArgument + " " + operationType + " " + secondArgument + " = " + result);
-
+        for (int operatorId : operatorIds) {
+            findViewById(operatorId).setOnClickListener(operatorButtonsClickListener);
+        }
     }
-
 }

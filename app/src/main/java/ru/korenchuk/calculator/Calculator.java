@@ -7,9 +7,6 @@ public class Calculator {
     int firstArgument, secondArgument;
     StringBuilder str = new StringBuilder();
     private State state;
-
-    private enum State {firstArgument, secondArgument, showResult}
-
     private int selectedOperator;
 
     public Calculator() {
@@ -107,4 +104,6 @@ public class Calculator {
     public String getText() {
         return str.toString();
     }
+
+    private enum State {firstArgument, secondArgument, showResult}
 }

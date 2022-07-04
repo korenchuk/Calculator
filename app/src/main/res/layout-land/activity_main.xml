@@ -3,176 +3,139 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    style="@style/Layout">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/blackscreen"
-        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/calcWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/land_text_margin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text" />
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:columnCount="4"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/land_grid_margin"
         android:useDefaultMargins="true">
 
         <Button
             android:id="@+id/button7"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button7"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button7" />
 
         <Button
             android:id="@+id/button8"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button8"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button8" />
 
         <Button
             android:id="@+id/button9"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button9"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button9" />
 
         <Button
             android:id="@+id/buttonDivide"
+            style="@style/CalcButton.Operator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_grey"
-            android:text="@string/buttonDivide"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/buttonDivide" />
 
         <Button
             android:id="@+id/button4"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button4"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button4" />
 
         <Button
             android:id="@+id/button5"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button5"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button5" />
 
         <Button
             android:id="@+id/button6"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button6"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button6" />
 
         <Button
             android:id="@+id/buttonMultiple"
+            style="@style/CalcButton.Operator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_grey"
-            android:text="@string/buttonMultiple"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/buttonMultiple" />
 
         <Button
             android:id="@+id/button1"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button1"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button1" />
 
         <Button
             android:id="@+id/button2"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button2"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button2" />
 
         <Button
             android:id="@+id/button3"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button3"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button3" />
 
         <Button
             android:id="@+id/buttonMinus"
+            style="@style/CalcButton.Operator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_grey"
-            android:text="@string/buttonMinus"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/buttonMinus" />
 
         <Button
             android:id="@+id/buttonDot"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/buttonDot"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/buttonDot" />
 
         <Button
             android:id="@+id/button0"
+            style="@style/CalcButton.Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/dark_grey"
-            android:text="@string/button0"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/button0" />
 
         <Button
             android:id="@+id/buttonEquals"
+            style="@style/CalcButton.Equals"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/green"
-            android:text="@string/buttonEquals"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/buttonEquals" />
 
         <Button
             android:id="@+id/buttonPlus"
+            style="@style/CalcButton.Operator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_grey"
-            android:text="@string/buttonPlus"
-            android:textSize="@dimen/button_text"
-            app:cornerRadius="@dimen/button_corner_radius" />
+            android:text="@string/buttonPlus" />
 
     </GridLayout>
 
-    <TextView
-        android:id="@+id/calcWindow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/white"
-        android:layout_gravity="center_horizontal"
-        android:textSize="@dimen/button_text"/>
 
 </FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Layout">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="CalcButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/button_text</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+    </style>
+
+    <style name="CalcButton.Number">
+        <item name="android:backgroundTint">@color/dark_grey</item>
+    </style>
+
+    <style name="CalcButton.Operator">
+        <item name="android:backgroundTint">@color/light_grey</item>
+    </style>
+
+    <style name="CalcButton.Equals">
+        <item name="android:backgroundTint">@color/green</item>
+    </style>
+
+</resources>

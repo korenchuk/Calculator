@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Calculator calculator;
     private TextView calcWindow;
+    private Button buttonOptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         };
         calcWindow = findViewById(R.id.calcWindow);
         calculator = new Calculator();
+        buttonOptions = findViewById(R.id.buttonOptions);
+
 
         View.OnClickListener numberButtonsClickListener = new View.OnClickListener() {
             @Override
@@ -57,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
                 calcWindow.setText(calculator.getText());
             }
         };
+
+        buttonOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         for (int numberId : numberIds) {
             findViewById(numberId).setOnClickListener(numberButtonsClickListener);

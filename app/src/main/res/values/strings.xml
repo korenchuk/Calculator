@@ -16,4 +16,7 @@
     <string name="buttonMultiple">*</string>
     <string name="buttonDivide">/</string>
     <string name="buttonEquals">=</string>
+    <string name="buttonDay">Дневная тема</string>
+    <string name="buttonNight">Ночная тема</string>
+    <string name="buttonOptions">Смена темы</string>
 </resources>

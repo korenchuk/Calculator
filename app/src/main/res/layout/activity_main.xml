@@ -136,5 +136,14 @@
 
     </GridLayout>
 
+    <Button
+        android:id="@+id/buttonOptions"
+        style="@style/CalcButton.Equals"
+        android:layout_width="203dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="570dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/buttonOptions"
+        android:textSize="15sp" />
 
 </FrameLayout>
